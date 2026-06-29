@@ -405,6 +405,153 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
 }
 @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;transition-duration:0.01ms !important}}
 
+
+/* ══ CSS-ONLY IMAGES — zero external dependencies ══ */
+
+/* BENTO visuals */
+.bento-img{display:block;width:100%}
+
+/* Cloud / Infrastructure */
+.bento-cloud{
+  min-height:520px;height:100%;
+  background:
+    radial-gradient(ellipse 60% 40% at 30% 60%, rgba(201,150,58,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 60% at 75% 30%, rgba(140,90,20,0.22) 0%, transparent 50%),
+    linear-gradient(160deg, #0A0804 0%, #1A1208 40%, #0E0C06 100%);
+  position:relative;overflow:hidden}
+.bento-cloud::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(201,150,58,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,150,58,0.06) 1px,transparent 1px);
+  background-size:32px 32px}
+.bento-cloud::after{
+  content:'☁';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-58%);
+  font-size:5rem;opacity:0.12;pointer-events:none}
+
+/* Code */
+.bento-code{
+  height:255px;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(80,180,120,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(201,150,58,0.10) 0%, transparent 50%),
+    linear-gradient(145deg, #06100A 0%, #0A1A10 50%, #080E06 100%);
+  position:relative;overflow:hidden}
+.bento-code::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,
+    transparent,transparent 18px,
+    rgba(80,180,80,0.04) 18px,rgba(80,180,80,0.04) 19px)}
+.bento-code::after{
+  content:'< />';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:monospace;font-size:2.5rem;font-weight:700;
+  color:rgba(80,200,100,0.15);pointer-events:none;letter-spacing:0.1em}
+
+/* AI */
+.bento-ai{
+  height:255px;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(100,60,180,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(201,150,58,0.12) 0%, transparent 45%),
+    linear-gradient(135deg, #080610 0%, #0E0A1C 50%, #060408 100%);
+  position:relative;overflow:hidden}
+.bento-ai::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle 1px at 16px 16px, rgba(150,100,255,0.2) 0%, transparent 1px),
+    radial-gradient(circle 1px at 48px 48px, rgba(201,150,58,0.15) 0%, transparent 1px);
+  background-size:32px 32px}
+.bento-ai::after{
+  content:'⬡';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:4.5rem;opacity:0.10;color:#A080FF;pointer-events:none}
+
+/* Team/Strategy wide */
+.bento-team{
+  background:
+    radial-gradient(ellipse at 25% 75%, rgba(201,150,58,0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 25%, rgba(160,110,30,0.12) 0%, transparent 50%),
+    linear-gradient(135deg, #10090600%, #1C1408 50%, #120D06 100%);
+  position:relative;overflow:hidden}
+.bento-team::before{
+  content:'';position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(
+      90deg,transparent,transparent 60px,
+      rgba(201,150,58,0.03) 60px,rgba(201,150,58,0.03) 61px)}
+.bento-team::after{
+  content:'◈ ◈ ◈';position:absolute;bottom:60px;left:50%;
+  transform:translateX(-50%);
+  font-size:2rem;opacity:0.08;letter-spacing:1.5rem;pointer-events:none;
+  color:var(--gold)}
+
+/* ABOUT section CSS images */
+.about-css-img{width:100%;border-radius:inherit}
+.about-img-main .about-css-img{height:230px}
+.about-img-sm .about-css-img{height:155px}
+
+.about-css-team{
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(201,150,58,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 30%, rgba(140,90,20,0.14) 0%, transparent 50%),
+    linear-gradient(145deg, #120D08 0%, #1E1610 50%, #100B06 100%);
+  position:relative;overflow:hidden}
+.about-css-team::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(201,150,58,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,150,58,0.04) 1px,transparent 1px);
+  background-size:24px 24px}
+.about-css-team::after{
+  content:'⬤ ⬤ ⬤';position:absolute;bottom:20px;left:50%;
+  transform:translateX(-50%);font-size:1.5rem;
+  letter-spacing:1.2rem;opacity:0.08;color:var(--gold)}
+
+.about-css-circuit{
+  background:
+    radial-gradient(ellipse at 60% 40%, rgba(30,100,80,0.18) 0%, transparent 55%),
+    linear-gradient(135deg, #060E0A 0%, #0A1810 100%);
+  position:relative;overflow:hidden}
+.about-css-circuit::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(30,180,100,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(30,180,100,0.06) 1px,transparent 1px),
+    radial-gradient(circle 2px at 24px 24px,rgba(30,200,100,0.2) 0%,transparent 2px),
+    radial-gradient(circle 2px at 72px 72px,rgba(30,200,100,0.15) 0%,transparent 2px);
+  background-size:24px 24px,24px 24px,48px 48px,48px 48px}
+
+.about-css-dev{
+  background:
+    radial-gradient(ellipse at 40% 60%, rgba(201,150,58,0.14) 0%, transparent 55%),
+    linear-gradient(145deg, #100D06 0%, #1A1508 100%);
+  position:relative;overflow:hidden}
+.about-css-dev::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    0deg,transparent,transparent 14px,
+    rgba(201,150,58,0.05) 14px,rgba(201,150,58,0.05) 15px)}
+.about-css-dev::after{
+  content:'{ }';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:monospace;font-size:2.25rem;font-weight:700;
+  color:rgba(201,150,58,0.12);pointer-events:none}
+
+/* CSS AVATARS — initials in gradient circles */
+.tcard-avatar{overflow:visible!important;border:none!important}
+.css-avatar{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--sans);font-size:0.7rem;font-weight:700;
+  letter-spacing:0.04em;color:#0E0B08;flex-shrink:0;
+  border:1.5px solid var(--gborder2)}
+.css-avatar-m {background:linear-gradient(135deg,#C9963A,#8B5E1A)}
+.css-avatar-f {background:linear-gradient(135deg,#E0B35A,#A07825)}
+.css-avatar-m2{background:linear-gradient(135deg,#B8823A,#7A5018)}
+
 /* ── REVEAL ── */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.65s ease,transform 0.65s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
@@ -547,7 +694,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
     </div>
     <div class="bento">
       <div class="bento-cell tall reveal">
-        <img class="bento-img" src="https://source.unsplash.com/900x600/?server,cloud,technology" alt="Cloud infrastructure" loading="lazy">
+        <div class="bento-img bento-cloud"></div>
         <div class="bento-overlay">
           <div class="bento-tag">Cloud</div>
           <div class="bento-label">Multi-cloud infrastructure at scale</div>
@@ -555,7 +702,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
         </div>
       </div>
       <div class="bento-cell reveal">
-        <img class="bento-img" src="https://source.unsplash.com/900x600/?code,programming,screen" alt="Code" loading="lazy">
+        <div class="bento-img bento-code"></div>
         <div class="bento-overlay">
           <div class="bento-tag">Dev</div>
           <div class="bento-label">Clean code, scalable architecture</div>
@@ -563,7 +710,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
         </div>
       </div>
       <div class="bento-cell reveal">
-        <img class="bento-img" src="https://source.unsplash.com/900x600/?artificial,intelligence,data" alt="AI" loading="lazy">
+        <div class="bento-img bento-ai"></div>
         <div class="bento-overlay">
           <div class="bento-tag">AI</div>
           <div class="bento-label">Intelligent automation pipelines</div>
@@ -571,7 +718,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
         </div>
       </div>
       <div class="bento-cell wide reveal">
-        <img class="bento-img" src="https://source.unsplash.com/1200x600/?team,office,workplace" alt="Team" loading="lazy" style="height:255px;width:100%;object-fit:cover">
+        <div class="bento-img bento-team" style="height:255px;width:100%"></div>
         <div class="bento-overlay">
           <div class="bento-tag">Strategy</div>
           <div class="bento-label">End-to-end digital transformation — from roadmap to launch</div>
@@ -633,13 +780,13 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
     <div class="about-grid">
       <div class="about-imgs reveal">
         <div class="about-img-main">
-          <img src="https://source.unsplash.com/900x500/?team,collaboration,meeting" alt="Team" loading="lazy">
+          <div class="about-css-img about-css-team"></div>
         </div>
         <div class="about-img-sm">
-          <img src="https://source.unsplash.com/600x400/?circuit,hardware,electronics" alt="Tech" loading="lazy">
+          <div class="about-css-img about-css-circuit"></div>
         </div>
         <div class="about-img-sm">
-          <img src="https://source.unsplash.com/600x400/?developer,laptop,working" alt="Developer" loading="lazy">
+          <div class="about-css-img about-css-dev"></div>
         </div>
         <div class="about-float">
           <div class="about-float-num">4.9★</div>
@@ -676,7 +823,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
         <div class="stars">★★★★★</div>
         <div class="tcard-quote">Omnixx rebuilt our entire backend in 3 months. Performance improved by 4× and we haven't had a production incident since.</div>
         <div class="tcard-author">
-          <div class="tcard-avatar"><img src="https://source.unsplash.com/80x80/?man,portrait,professional" alt="Marcus T."></div>
+          <div class="tcard-avatar"><div class="css-avatar css-avatar-m">MT</div></div>
           <div><div class="tcard-name">Marcus T.</div><div class="tcard-role">CTO, Fintech Scale-up</div></div>
         </div>
       </div>
@@ -684,7 +831,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
         <div class="stars">★★★★★</div>
         <div class="tcard-quote">Their AI integration work cut our manual processing time by 70%. The ROI was clear within 6 weeks of launch.</div>
         <div class="tcard-author">
-          <div class="tcard-avatar"><img src="https://source.unsplash.com/80x80/?woman,portrait,business" alt="Leila N."></div>
+          <div class="tcard-avatar"><div class="css-avatar css-avatar-f">LN</div></div>
           <div><div class="tcard-name">Leila N.</div><div class="tcard-role">VP Ops, Logistics Co.</div></div>
         </div>
       </div>
@@ -692,7 +839,7 @@ footer{position:relative;z-index:10;border-top:1px solid var(--gborder);
         <div class="stars">★★★★★</div>
         <div class="tcard-quote">The team is exceptional — sharp technically and they communicate clearly throughout. Shipped on time, every time.</div>
         <div class="tcard-author">
-          <div class="tcard-avatar"><img src="https://source.unsplash.com/80x80/?man,smiling,headshot" alt="James O."></div>
+          <div class="tcard-avatar"><div class="css-avatar css-avatar-m2">JO</div></div>
           <div><div class="tcard-name">James O.</div><div class="tcard-role">Founder, SaaS Startup</div></div>
         </div>
       </div>
